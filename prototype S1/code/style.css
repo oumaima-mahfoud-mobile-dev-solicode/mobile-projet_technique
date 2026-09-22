@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+body {
+    background: aliceblue;
+}
+.title {
+    text-align: center;
+    color: purple;
+    margin: 20px;
+}
+.produits {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.produits > a {
+    width: 100%;
+    padding: 10px;
+    background: purple;
+    color: white;
+    text-align: center;
+}
+.card {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid purple;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+}
+.Ajouter {
+    width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+}
+.Ajouter form {
+    display: flex;
+    flex-direction: column;
+}
+.Ajouter input,
+.Ajouter textarea,
+.Ajouter select,
+.Ajouter button {
+    padding: 10px;
+    margin: 5px;
+}
+
