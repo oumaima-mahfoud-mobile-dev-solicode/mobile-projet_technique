@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "nom": "Robes",
+        "description": "Articles et tendances concernant les robes."
+    },
+    {
+        "id": 2,
+        "nom": "Chaussures",
+        "description": "Articles sur les chaussures et les tendances."
+    },
+    {
+        "id": 3,
+        "nom": "Sacs",
+        "description": "Articles sur les sacs et accessoires de mode."
+    },
+    {
+        "id": 4,
+        "nom": "Accessoires",
+        "description": "Articles sur les différents accessoires de mode."
+    },
+    {
+        "id": 5,
+        "nom": "Bijoux",
+        "description": "Articles sur les bijoux et les tendances."
+    },
+    {
+        "id": 6,
+        "nom": "hkiiuhbghhg",
+        "description": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+    },
+    {
+        "id": 7,
+        "nom": "h",
+        "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+]
