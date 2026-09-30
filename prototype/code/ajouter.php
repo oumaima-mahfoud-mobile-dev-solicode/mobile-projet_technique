@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
     $price = isset($_POST['price']) ?$_POST['price'] : '';
     $stock = isset($_POST['stock']) ? $_POST['stock'] : '';
     if($name===''||$description==='' || $price==='' || $stock===''|| $image['error']!==0 || $collection==='' ){
-        echo "Veuillez rem plire tout les champ";
+         echo "Veuillez rem plire tout les champ";
     exit;
     }
     
