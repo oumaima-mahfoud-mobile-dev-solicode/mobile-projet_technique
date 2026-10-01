@@ -11,27 +11,7 @@
 </head>
 
 <body>
-
-<div class="flex min-h-screen">
-    <aside class="w-64 bg-gray-800 text-white p-6">
-        <h1 class="text-2xl font-bold mb-8">
-            Fashion Blog
-        </h1>
-        <nav>
-            <a href="#" class="block p-3">
-                Tableau de bord
-            </a>
-            <a href="#" class="block p-3">
-                Articles
-            </a>
-            <a href="#" class="block p-3 bg-gray-700">
-                Catégories
-            </a>
-        </nav>
-    </aside>
-<!-- Main -->
     <main class="flex-1 p-8">
-        <!-- Header -->
         <div class="flex justify-between mb-8">
             <div>
                 <h2 class="text-3xl font-bold">
@@ -55,7 +35,6 @@
                 Ajouter une catégorie
             </h3>
             <form id="form-categorie">
-                <!-- Nom -->
                 <label
                     for="nom"
                     class="block mb-2">
@@ -67,7 +46,6 @@
                     placeholder="Ex : Robes"
                     class="w-full border p-3 mb-4"
                     required>
-                <!-- Description -->
                 <label
                     for="description"
                     class="block mb-2">
@@ -78,19 +56,15 @@
                     placeholder="Description de la catégorie"
                     class="w-full border p-3 mb-4"
                     required></textarea>
-                <!-- Buttons -->
                 <button
                     type="submit"
                     class="bg-blue-600 text-white px-5 py-2">
                     Enregistrer
                 </button>
-
-
                 <button
                     type="button"
                     id="btn-annuler"
                     class="bg-gray-400 text-white px-5 py-2">Annuler</button>
-
             </form>
         </div>
         <!-- Tableau -->
