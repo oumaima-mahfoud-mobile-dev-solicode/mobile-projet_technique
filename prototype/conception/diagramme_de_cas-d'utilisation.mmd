@@ -1,0 +1,32 @@
+flowchart LR
+
+    Admin((Admin))
+    Visiteur((Visiteur))
+
+    subgraph Blog["Blog de gestion de produits"]
+
+        A([Se connecter])
+
+        B([Consulter les catégories])
+        C([Ajouter une catégorie])
+        D([Modifier une catégorie])
+        E([Supprimer une catégorie])
+
+        F([Consulter les produits])
+        G([Ajouter un produit])
+        H([Modifier un produit])
+        I([Supprimer un produit])
+    end
+
+    Admin --> A
+    Admin --> B
+    Admin --> C
+    Admin --> D
+    Admin --> E
+    Admin --> F
+    Admin --> G
+    Admin --> H
+    Admin --> I
+
+    Visiteur --> B
+    Visiteur --> F

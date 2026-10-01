@@ -1,0 +1,34 @@
+classDiagram
+
+class Produit {
+    -id
+    -nom
+    -description
+    -prix
+    -stock
+    -image
+
+    +getNom()
+    +setNom()
+    +getDescription()
+    +setDescription()
+    +getPrix()
+    +setPrix()
+    +getStock()
+    +setStock()
+    +getImage()
+    +setImage()
+}
+
+class Categorie {
+    -id
+    -nom
+    -description
+
+    +getNom()
+    +setNom()
+    +getDescription()
+    +setDescription()
+}
+
+Categorie "1" --> "0..*" Produit
