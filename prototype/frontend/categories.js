@@ -1,63 +1,52 @@
-const btnNouvelle = document.getElementById("btn-nouvelle");
-const sectionForm = document.getElementById("section_form");
-const btnAnnuler = document.getElementById("btn-annuler");
-const formCategorie = document.getElementById("form-categorie");
-const tableCategorie = document.getElementById("table-categorie");
+const btnAjouter = document.getElementById("btn-ajouter");
 
-console.log("categories.js fonctionne !");
+const formContainer =
+    document.getElementById("section_form");
 
+const formCategorie =
+    document.getElementById("form-categorie");
 
-
-// 1. OUVRIR LE FORMULAIRE
-
-btnNouvelle.addEventListener("click", function () {
-
-    sectionForm.classList.remove("hidden");
-
-});
+const tableCategorie =
+    document.getElementById("table-categorie");
 
 
-// 2. FERMER LE FORMULAIRE
+// Afficher formulaire
 
-btnAnnuler.addEventListener("click", function () {
+btnAjouter.addEventListener("click", function () {
 
-    sectionForm.classList.add("hidden");
-
-    formCategorie.reset();
+    formContainer.classList.remove("hidden");
 
 });
 
-// 3. CHARGER LES CATÉGORIES
+
+// GET
 
 function chargerCategories() {
 
-    fetch("/backend/categories.php")
+    fetch("/backend/api.php")
 
         .then(response => response.json())
 
-        .then(data => {
+        .then(categories => {
 
-            console.log("DATA :", data);
-
-            // Vider le tableau
             tableCategorie.innerHTML = "";
 
-            // Ajouter chaque catégorie dans le tableau
-            data.forEach(categorie => {
+            categories.forEach(category => {
 
-                const ligne = document.createElement("tr");
+                const ligne =
+                    document.createElement("tr");
 
                 ligne.innerHTML = `
                     <td class="p-4">
-                        ${categorie.id}
+                        ${category.id}
                     </td>
 
                     <td class="p-4">
-                        ${categorie.nom}
+                        ${category.nom}
                     </td>
 
                     <td class="p-4">
-                        ${categorie.description}
+                        ${category.description}
                     </td>
                 `;
 
@@ -65,80 +54,63 @@ function chargerCategories() {
 
             });
 
+        });
+}
+
+
+// POST
+
+formCategorie.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+        const nom =
+            document.getElementById("nom").value;
+
+        const description =
+            document.getElementById("description").value;
+
+        const category = {
+
+            nom: nom,
+
+            description: description
+
+        };
+
+
+        fetch("/backend/api.php", {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify(category)
+
         })
 
-        .catch(error => {
+        .then(response => response.json())
 
-            console.error("Erreur :", error);
+        .then(data => {
+
+            console.log("Ajouté :", data);
+
+            chargerCategories();
+
+            formContainer.classList.add("hidden");
+
+            formCategorie.reset();
 
         });
 
-}
-
-// 4. AJOUTER UNE CATÉGORIE
-
-
-formCategorie.addEventListener("submit", function (event) {
-
-    event.preventDefault();
-
-    const nom = document.getElementById("nom").value;
-    const description = document.getElementById("description").value;
+    }
+);
 
 
-    const categorie = {
-
-        nom: nom,
-        description: description
-
-    };
-
-
-    console.log("Nouvelle catégorie :", categorie);
-
-
-    fetch("/backend/categories.php", {
-
-        method: "POST",
-
-        headers: {
-
-            "Content-Type": "application/json"
-
-        },
-
-        body: JSON.stringify(categorie)
-
-    })
-
-    .then(response => response.json())
-
-    .then(data => {
-
-        console.log("Catégorie ajoutée :", data);
-
-
-        // Recharger le tableau
-        chargerCategories();
-
-
-        // Fermer le formulaire
-        sectionForm.classList.add("hidden");
-
-
-        // Vider le formulaire
-        formCategorie.reset();
-
-    })
-
-    .catch(error => {
-
-        console.error("Erreur :", error);
-
-    });
-
-});
-// 5. CHARGER LES CATÉGORIES AU DÉBUT
-// ===============================
+// Charger au démarrage
 
 chargerCategories();

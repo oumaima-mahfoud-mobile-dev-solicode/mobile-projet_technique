@@ -13,7 +13,6 @@
 <body>
 
 <div class="flex min-h-screen">
-    <!-- Sidebar -->
     <aside class="w-64 bg-gray-800 text-white p-6">
         <h1 class="text-2xl font-bold mb-8">
             Fashion Blog
@@ -30,9 +29,7 @@
             </a>
         </nav>
     </aside>
-
-
-    <!-- Main -->
+<!-- Main -->
     <main class="flex-1 p-8">
         <!-- Header -->
         <div class="flex justify-between mb-8">
@@ -44,16 +41,12 @@
                     Gérer les catégories des articles de mode
                 </p>
             </div>
-
-
-            <button
-                id="btn-nouvelle"
+             <button
+                id="btn-ajouter"
                 class="bg-blue-600 text-white px-5 py-3">
                 + Nouvelle catégorie
             </button>
         </div>
-
-
         <!-- Formulaire -->
         <div
             id="section_form"
@@ -100,8 +93,6 @@
 
             </form>
         </div>
-
-
         <!-- Tableau -->
         <div class="bg-white">
             <table class="w-full">
@@ -120,19 +111,13 @@
                         </th>
                     </tr>
                 </thead>
-
-
                 <tbody id="table-categorie">
-
                     <!-- Les catégories seront ajoutées ici avec JavaScript -->
-
                 </tbody>
             </table>
         </div>
     </main>
 </div>
-
-
 <script src="categories.js"></script>
 
 </body>
