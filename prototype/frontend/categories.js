@@ -1,10 +1,10 @@
 const btnAjouter = document.getElementById("btn-ajouter");
-const formContainer =document.getElementById("section_form");
+const divform=document.getElementById("div_form");
 const formCategorie =document.getElementById("form-categorie");
 const tableCategorie =document.getElementById("table-categorie");
-const btnannuler = document.getElementById("btn-annuler")
+// const btnannuler = document.getElementById("btn-annuler")
 btnAjouter.addEventListener("click", function () {
-    formContainer.classList.remove("hidden");
+    divform.classList.remove("hidden");
 });
 function chargerCategories() {
     fetch("/backend/api.php")
@@ -54,7 +54,7 @@ formCategorie.addEventListener(
         .then(data => {
             console.log("Ajouté :", data);
             chargerCategories();
-            formContainer.classList.add("hidden");
+            divform.classList.add("hidden");
             formCategorie.reset();
         });
     }
