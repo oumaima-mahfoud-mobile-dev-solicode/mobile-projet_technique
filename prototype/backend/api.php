@@ -1,7 +1,7 @@
 <?php
 
 header("Content-Type: application/json");
-require_once __DIR__ . "/Category.php";
+require_once __DIR__ . "../Category.php";
 $category = new Category();
 
 

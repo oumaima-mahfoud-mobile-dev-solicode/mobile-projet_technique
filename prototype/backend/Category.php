@@ -8,7 +8,7 @@ class Category
 
     public function __construct()
     {
-        $this->file = "../data/categories.json";
+        $this->file = "../backend/data/categories.json";
     }
 
     public function getNom()
