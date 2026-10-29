@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestion des Catégories</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-100 text-gray-800">
+
+    <main class="max-w-6xl mx-auto p-6 md:p-10">
+
+        <!-- En-tête -->
+         
+        <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-8">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900">
+                    Gestion des Catégories
+                </h2>
+
+                <p class="text-gray-500 mt-2">
+                    Gérer les catégories des articles de mode
+                </p>
+            </div>
+
+            <button
+                id="btn-ajouter"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-3 rounded-lg shadow-sm transition duration-200">
+                + Nouvelle catégorie
+            </button>
+        </div>
+
+        <!-- Formulaire -->
+         <!-- TODO: Ajouter un formulaire d'inscription -->
+        <div
+            id="div_form"
+            class="p-6 bg-white mb-8 rounded-xl shadow-sm border border-gray-200 hidden">
+
+            <h3 class="text-xl font-bold mb-6 text-gray-900">
+                Ajouter une catégorie
+            </h3>
+
+            <form id="form-categorie" class="space-y-2">
+                <!-- FIXME: Corriger le style du bouton -->
+
+                <label
+                    for="nom"
+                    class="block mb-2 font-medium text-gray-700">
+                    Nom de la catégorie
+                </label>
+
+                <input
+                    type="text"
+                    name="nom"
+                    id="nom"
+                    placeholder="Ex : Robes"
+                    class="w-full border border-gray-300 p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    required>
+
+                <label
+                    for="description"
+                    class="block mb-2 font-medium text-gray-700">
+                    Description
+                </label>
+
+                <input
+                    id="description"
+                    name="description"
+                    placeholder="Description de la catégorie"
+                    rows="4"
+                    class="w-full border border-gray-300 p-3 mb-4 rounded-lg resize-y focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    ></input>
+
+                <div class="flex flex-wrap gap-3 pt-3">
+
+                    <button
+                        type="submit"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2.5 rounded-lg transition duration-200">
+                        Enregistrer
+                    </button>
+
+                    <button
+                        type="button"
+                        id="btn-annuler"
+                        class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium px-5 py-2.5 rounded-lg transition duration-200">
+                        Annuler
+                    </button>
+
+                </div>
+            </form>
+        </div>
+
+        <!-- Tableau -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+
+            <div class="p-5 border-b border-gray-200">
+                <h3 class="text-lg font-bold text-gray-900">
+                    Liste des catégories
+                </h3>
+
+                <p class="text-sm text-gray-500 mt-1">
+                    Retrouvez toutes les catégories enregistrées.
+                </p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+
+                    <thead class="bg-gray-800 text-white">
+                        <tr>
+                            <th class="p-4 text-sm font-semibold uppercase tracking-wide">
+                                ID
+                            </th>
+
+                            <th class="p-4 text-sm font-semibold uppercase tracking-wide">
+                                Nom
+                            </th>
+
+                            <th class="p-4 text-sm font-semibold uppercase tracking-wide">
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody
+                        id="tbody"
+                        class="divide-y divide-gray-100">
+
+                        <!-- Les catégories seront ajoutées ici avec JavaScript -->
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+        <!-- Pied de page -->
+        <footer class="text-center text-sm text-gray-400 mt-8">
+            Gestion des catégories — Blog Spartel
+        </footer>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
+```

@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion Catégories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-8">
+
+    <main class="max-w-4xl mx-auto bg-white p-6 rounded-lg">
+
+        <h1 class="text-2xl font-bold mb-4">
+            Gestion des Catégories
+        </h1>
+
+        <button id="btn-ajouter"
+            class="bg-blue-600 text-white p-2 rounded mb-4">
+            + Ajouter
+        </button>
+
+        <div id="div_form" class="hidden mb-6">
+
+            <form id="form-categorie">
+
+                <input id="nom" required
+                    placeholder="Nom"
+                    class="border p-2 w-full mb-3">
+
+                <input id="description" required
+                    placeholder="Description"
+                    class="border p-2 w-full mb-3">
+
+                <button type="submit"
+                    class="bg-green-600 text-white p-2 rounded">
+                    Enregistrer
+                </button>
+
+                <button type="button" id="btn-annuler"
+                    class="bg-gray-300 p-2 rounded">
+                    Annuler
+                </button>
+
+            </form>
+        </div>
+
+        <table class="w-full text-left">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="p-4">ID</th>
+                    <th class="p-4">Nom</th>
+                    <th class="p-4">Description</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbody"></tbody>
+        </table>
+
+    </main>
+        <div id="toast-container"
+        class="fixed top-4 right-4 z-50">
+    </div>
+
+    <script src="/frontend/assets/app.js"></script>
+</body>
+</html>
