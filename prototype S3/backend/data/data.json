@@ -8,5 +8,10 @@
         "id": 2,
         "nom": "Chemises",
         "description": "Variété de chemises pour un style élégant"
+    },
+    {
+        "id": 3,
+        "nom": "dddddd",
+        "description": "dddddddddd"
     }
 ]

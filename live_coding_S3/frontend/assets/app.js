@@ -7,24 +7,7 @@ const nom = document.getElementById("nom");
 const description = document.getElementById("description");
 const tbody = document.getElementById("tbody");
 
-// Toast
-function showToast(message, type = "success") {
-    const toast = document.createElement("div");
 
-    toast.className = "text-white p-3 rounded mb-2 shadow";
-
-    toast.classList.add(
-        type === "success" ? "bg-green-600" : "bg-red-600"
-    );
-
-    toast.textContent = message;
-
-    document.getElementById("toast-container").appendChild(toast);
-
-    setTimeout(() => {
-        toast.remove();
-    }, 3000);
-}
 
 // Afficher le formulaire
 btnAjouter.addEventListener("click", function () {
@@ -86,7 +69,7 @@ formcat.addEventListener("submit", function (event) {
         })
         .catch(error => {
             console.error(error);
-            showToast("Erreur lors de l'ajout", "error");
+            
         });
 });
 
