@@ -1,11 +1,23 @@
-const API_URL = "/backend/api/controllers/CategoryController.php";
-
+const API_URL = "/backend/api/controller/CategoryController.php";
 const btnAjouter = document.getElementById("btn-ajouter");
 const divform = document.getElementById("div_form");
 const formcat = document.getElementById("form-categorie");
 const nom = document.getElementById("nom");
 const description = document.getElementById("description");
 const tbody = document.getElementById("tbody");
+
+
+//toast
+function showToast(message , Type="success"){
+    const toast = document.createElement("div");
+    toast.className="text-whitte p-3 ronded mb-2 shodow";
+    toast.classList.add(Type=== "success" ? "bg-green-600": "bg-red-600");
+    toast.textContent=message;
+    document.getElementById("toast-container").appendChild(toast);
+    setTimeout(()=>{
+        toast.remove();
+    },3000);
+}
 
 
 
@@ -69,6 +81,8 @@ formcat.addEventListener("submit", function (event) {
         })
         .catch(error => {
             console.error(error);
+            showToast("error de connection", error);
+            
             
         });
 });

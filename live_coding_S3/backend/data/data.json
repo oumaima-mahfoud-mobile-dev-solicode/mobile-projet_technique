@@ -1,12 +1,1 @@
-[
-    {
-        "id": 1,
-        "nom": "Robes",
-        "description": "Collection de robes pour toutes les occasions"
-    },
-    {
-        "id": 2,
-        "nom": "Chemises",
-        "description": "Variété de chemises pour un style élégant"
-    }
-]
+[{"id":4,"nom":"Robes","description":"Collection de robes pour toutes les occasions"},{"id":4,"nom":"Chemises","description":"Vari\u00e9t\u00e9 de chemises pour un style \u00e9l\u00e9gant"},{"id":4,"nom":"hhh","description":"hhh"},{"id":4,"nom":"hhh","description":"hhhhh"},{"id":5,"nom":"hhh","description":"hhh"},{"id":6,"nom":"oumaima","description":"mahfoud"},{"id":7,"nom":"hhhh","description":"hhhh"},{"id":8,"nom":"nnn","description":"hhhh"},{"id":9,"nom":"HHHHHHHHHHH","description":"JJJJJJJJJJJJJ"}]
