@@ -1,42 +1,12 @@
 [
     {
         "id": 1,
-        "nom": "hhhhhhhh",
-        "description": "jjjjjj"
+        "nom": "Robes",
+        "description": "Collection de robes pour toutes les occasions"
     },
     {
         "id": 2,
-        "nom": "hhh",
-        "description": "hhhhhhhhhhh"
-    },
-    {
-        "id": 3,
-        "nom": "holla",
-        "description": "gestion"
-    },
-    {
-        "id": 4,
-        "nom": "hh",
-        "description": "hhhhhhhhhhhh"
-    },
-    {
-        "id": 5,
-        "nom": "hhhhhhhh",
-        "description": "hhhhhhh"
-    },
-    {
-        "id": 6,
-        "nom": "g",
-        "description": "jjjjjjj"
-    },
-    {
-        "id": 7,
-        "nom": "hhhhh",
-        "description": "hhhhhh"
-    },
-    {
-        "id": 8,
-        "nom": "hh",
-        "description": "hhh"
+        "nom": "Chemises",
+        "description": "Variété de chemises pour un style élégant"
     }
 ]
