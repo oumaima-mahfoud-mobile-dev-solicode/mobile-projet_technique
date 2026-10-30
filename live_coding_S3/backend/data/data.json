@@ -1,3 +1,12 @@
 [
-    
+    {
+        "id": 1,
+        "nom": "Robes",
+        "description": "Collection de robes pour toutes les occasions"
+    },
+    {
+        "id": 2,
+        "nom": "Chemises",
+        "description": "Variété de chemises pour un style élégant"
+    }
 ]
