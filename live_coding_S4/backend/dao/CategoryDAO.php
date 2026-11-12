@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__ . "/../classes/Category.php";
 
-// COUCHE 3 : DATA (DAO) -> lit/écrit dans data.json, RIEN d'autre
 class CategoryDAO {
     private string $file = __DIR__ . "/../data/data.json";
 
