@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . "/../dao/CategoryDAO.php";
 
-// COUCHE 2 : MÉTIER (Service) -> règles de gestion + validation
+
 class CategoryService {
     private CategoryDAO $dao;
 
@@ -17,7 +17,7 @@ class CategoryService {
         $nom = trim($data["nom"] ?? "");
         $description = trim($data["description"] ?? "");
 
-        // Règles métier
+        
         if ($nom === "" || $description === "") {
             throw new InvalidArgumentException("Nom et description obligatoires");
         }
